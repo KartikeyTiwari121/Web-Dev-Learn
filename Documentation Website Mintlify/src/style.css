@@ -168,7 +168,7 @@ input::placeholder {
 .main2{
   background-color: #000000;
   width: 100%;
-  height: 30vh;
+  height: 45vh;
   display: flex;
   flex-direction: column;
   gap: 4rem;
@@ -185,5 +185,68 @@ input::placeholder {
 .compSvg .svg1{
   margin-left: 2rem;
 }
-
+.main3{
+  background: #000000;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main3 h3{
+  font-size: 2.2rem;
+  font-weight: 600;
+  padding: 1rem;
+}
+.main3-p-description{
+  color: #b1b1b1;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.main3 .box-div{
+  display: flex;
+  gap: 2rem;
+}
+.box-divChild{
+  border: 1px solid rgba(93, 93, 93, 0.244);
+  border-radius: 1.2rem;
+  width: 35vw;
+  height: 73vh;
+  padding: 2rem;
+  background-image: url(MediaAssests/grid-bg-svg.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 2rem;
+}
+.box-divChild .box-div-p{
+  color: rgb(12, 185, 64);
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+.box-divChild .box-div-h5{
+  width: 100%;
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+.box-divChild .box-div-p2{
+  color: #b1b1b1;
+}
+.animatedDiv{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(93, 93, 93, 0.244);
+  border-radius: 1.2rem;
+}
+.animatedDiv-p{
+  color: rgb(12, 185, 64);
+  font-size: 0.9rem; 
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+  width: 72vw;
+}
 
