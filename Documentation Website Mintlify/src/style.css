@@ -5,7 +5,7 @@
   font-family: "Poppins", sans-serif;
 }
 body{
-  background-color: #111;
+  background-color:#08090B;
 }
 header{
   position: fixed;
@@ -70,9 +70,9 @@ header{
   background-image:
     linear-gradient(
       to bottom,
-      rgba(0,0,0,0) 30%,
-      rgba(0,0,0,0.85) 80%,
-      rgba(0,0,0,1) 100%
+      rgba(8,9,11,0) 30%,
+      rgba(8,9,11,0.85) 80%,
+      rgba(8,9,11,1) 100%
     ), url(MediaAssests/bg-dark.svg);
   background-size: cover;
   background-position: center;
@@ -166,7 +166,7 @@ input::placeholder {
   height: 100%;
 }
 .main2{
-  background-color: #000000;
+  background-color: #08090B;
   width: 100%;
   height: 45vh;
   display: flex;
@@ -186,17 +186,19 @@ input::placeholder {
   margin-left: 2rem;
 }
 .main3{
-  background: #000000;
+  background: #08090B;
   color: #ffffff;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 200vh;
 }
 .main3 h3{
   font-size: 2.2rem;
   font-weight: 600;
   padding: 1rem;
+  margin-top: -10rem;
 }
 .main3-p-description{
   color: #b1b1b1;
@@ -213,10 +215,6 @@ input::placeholder {
   width: 35vw;
   height: 73vh;
   padding: 2rem;
-  background-image: url(MediaAssests/grid-bg-svg.svg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   margin-bottom: 2rem;
 }
 .box-divChild .box-div-p{
@@ -234,6 +232,24 @@ input::placeholder {
 .box-divChild .box-div-p2{
   color: #b1b1b1;
 }
+.box-divChild .child-Animate1{
+  border-radius: 1rem;
+  width: 31vw;
+  height: 45vh;
+  background-image: url(MediaAssests/animate-boxDiv.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.box-divChild .child-Animate2{
+  border-radius: 1rem;
+  width: 31vw;
+  height: 45vh;
+  background-image: url(MediaAssests/animate-boxDiv2.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 .animatedDiv{
   display: flex;
   flex-direction: column;
@@ -241,12 +257,427 @@ input::placeholder {
   align-items: center;
   border: 1px solid rgba(93, 93, 93, 0.244);
   border-radius: 1.2rem;
+  padding-top: 3rem;
+  overflow: hidden;
 }
 .animatedDiv-p{
-  color: rgb(12, 185, 64);
+  color: #18E299;
   font-size: 0.9rem; 
   font-weight: 500;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
   width: 72vw;
+  text-align: center;
 }
+.animatedDiv h5{
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 0.7rem;
+}
+.animatedDiv-p1{
+  color: #b1b1b1;
+  text-align: center;
+}
+.animatedDiv div{
+  width: 100%;
+  height: 60vh;
+  background-image: url(MediaAssests/Animate-boxImgScreenshot.svg.png);
+ background-size: cover;
+ background-repeat: no-repeat;
+}
+.main4{
+  background-color: #151616;
+  width: 100%;
+  height: 180vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.main4-child1{
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin-top: -5rem;
+}
+.main4-child1 .main4-child1-div1{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 70vw;
+}
+.main4-child1-p{
+  color: #18E299;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+.main4-child1-div1 h4{
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 3rem;
+}
+.main4-child1-div1 div{
+  display: flex;
+  gap: 10rem;
+  align-items: center;
+}
+.main4-child1-div1 div p{
+  color: #b1b1b1;
+  font-weight: 500;
+}
+.main4-child1-div1 div button{
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.6rem 1.4rem;
+  border: none;
+  border-radius: 25px;
+  margin-right: -40px;
+  margin-top: -20px;
+}
+.main4-child1-div2{
+  display: flex;
+  gap: 3rem;
+}
+.main4-child1-div2 div img{
+  margin-bottom: 1.2rem;
+}
+.main4-child1-div2 div h5{
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 0.9rem;
+}
+.main4-child1-div2 div p{
+  color: #b1b1b1;
+}
+.main4-child2{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+.text-card{
+  background-image: url(MediaAssests/AnthropicBackground.svg);
+  border-radius: 2rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 70vw;
+  height: 70vh;
+  overflow: hidden;
+  color: #fff;
+  padding: 2rem;
+}
+.CardTextBox{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-left: 2rem;
+}
+.CardTextBox span{
+  margin-top: 2rem;
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+.CardTextBox h2{
+  margin-top: -1rem;
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+.CardTextBox .stats{
+  display: flex;
+  gap: 3rem;
+}
+.stats div{
+  margin-top: 5rem;
+}
+.stats div h3{
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+.stats div p{
+  font-size: 0.9rem;
+  color: #b1b1b1;
+}
+.Company-list{
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+}
+.main5{
+  background-color: #08090B;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 6rem;
+}
+.main5 span{
+  color: #18E299;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+.main5 h2{
+  color:#fff ;
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.main5 p{
+  color: #b1b1b1;
+  text-align: center;
+  font-size: 0.99rem;
+  font-weight: 500;
+}
+.main5-desc{
+  margin-bottom: 3rem;
+}
+.BrandCards{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 10rem;
+}
+.BrandCardBox{
+  width: 25vw;
+  height: 70vh;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.BrandCardBox div{
+  width: 100%;
+  height: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 1rem;
+}
+.BrandImg1{
+  background-image: url(MediaAssests/brandImgCard1.png);
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.BrandImg2{
+  background-image: url(MediaAssests/brandImgCard2.png);
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.BrandImg3{
+  background-image: url(MediaAssests/brandImgCard3.png);
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.BrandCardBox p{
+  font-size: 0.9rem;
+  text-align: start;
+  margin-bottom: 2rem;
+}
+.BrandCardBox span{
+  font-size: 1rem;
+  cursor: pointer;
+}
+.main6{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.main6 h2{
+  font-size: 2.3rem;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 0.8rem;
+}
+.main6 p{
+  color: #fff;
+  margin-bottom: 3rem;
+}
+.main6 .lastSectionButton-bar{
+  margin-bottom: 5rem;
+  display: flex;
+  gap: 1rem;
+}
+.main6 button{
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.6rem 1.4rem;
+  border: none;
+  border-radius: 25px;
+}
+.lastSectionButton-bar .LSB-bar2{
+  background: #08090B;
+  color: #fff;
+  border: 2px solid #151616;
+}
+.LSB-bar2:hover{
+  background: #151616;
+}
+.main6 section{
+  display: flex;
+  gap: 7rem;
+  padding: 2rem 0rem;
+}
+.main6 section div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main6 section hr{
+  border: 0.8px solid #151616;
+}
+.main6 section div img{
+  background: #000000;
+  padding: 0.6rem;
+  border-radius: 1rem;
+  border: 3px solid #151616;
+  margin-bottom: 2rem;
+}
+.main6 section div b{
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-bottom: 0.3rem;
+}
+.main6 section div span{
+  color: #18E299;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+footer{
+  border-top: 1px solid #151616;
+  margin-top: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer section{
+  width: 70%;
+  border-left: 1px solid #151616;
+  border-right: 1px solid #151616;
+}
+footer section .ContactSection{
+  display: flex;
+  align-items: center;
+  justify-content:space-around;
+  gap: 40rem;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #151616;
+}
+.ContactSection span{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.Footer-Menu{
+  color: #fff;
+  display: flex;
+  justify-content:space-around ;
+  margin: 4rem 0rem;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid #151616;
+}
+.Menu-col ul{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+ align-items: flex-start;
+}
+.Menu-col h4{
+  color: #b1b1b1;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  padding: 0.2rem 0.6rem;
+}
+.Menu-col ul li{
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  padding: 0.2rem 0.6rem;
+  
+}
+.Menu-col ul li:hover{
+  background: #151616;
+  border-radius: 1rem;
+  padding: 0.2rem 0.6rem;
+}
+.security-tag{
+  margin-top: -4rem;
+  border-bottom: 1px solid #151616;
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
 
+}
+.security-tag img{
+  width: 10vw;
+  height: 16vh;
+}
+.security-tag p{
+  color: #fff;
+  padding-right: 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.copyright-part{
+  padding-top: 2rem;
+  padding-bottom: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 14rem;
+}
+.copyright-part .systemStatusButton{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  padding: 0.2rem 0.8rem;
+  background: #151616d0;
+  border-radius: 1rem;
+}
+.systemStatusButton  img{
+  width: 0.9vw;
+}
+.systemStatusButton p{
+  color: #fff;
+  font-size: 0.9rem;
+}
+.copyright-text p{
+  color: #b1b1b1;
+  font-size: 0.9rem;
+}
+.copyright-part .themes{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  padding: 0.5rem 0.6rem;
+  background: #151616d0;
+  border-radius: 1.2rem;
+}
+.themes img{
+  width: 15px;
+  height: 15px;
+}
+.themes .theme1{
+  box-shadow: 0 0 0 6px #08090B;
+  border-radius: 10px;
+}
