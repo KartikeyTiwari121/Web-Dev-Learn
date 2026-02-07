@@ -393,3 +393,52 @@ main{
   width: 65%;
   height: auto;
 }
+.highlights{
+  background: #1e1c16c5;
+  width: 100%;
+  height: 90vh;
+  padding: 6rem;
+}
+.highlights section{
+   display: flex;
+   gap: 14rem;
+}
+.highlights strong{
+  color: #CCCCCC;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.highlight{
+  background: #28261f6c;
+  margin-bottom: 0.6rem;
+  border-radius: 0.3rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+.highlight:hover{
+  background: #28261fc6;
+}
+.highlight b{
+  color: #CCCCCC;
+  font-weight: 600;
+}
+.highlight p{
+  color: #7f7f7f;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  margin-bottom: 1.7rem;
+}
+.highlight span{
+  color: #7f7f7f;
+  font-weight: 600;
+}
+.highlight-box h6{
+  color: #f54e00;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+.highlight-box h6:hover{
+  color: #ca4000;
+}
