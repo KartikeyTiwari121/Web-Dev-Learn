@@ -480,6 +480,7 @@ footer .footer-lists{
   display: flex;
   justify-content: center;
   gap: 13rem;
+  margin-bottom: 6rem;
 }
 .footer-lists .footer-list{
   list-style: none;
@@ -492,4 +493,53 @@ footer .footer-lists{
 }
 .footer-list .footer-title{
   color: #7f7f7f;
+}
+.copyright-section{
+  color: #7f7f7f;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-around;
+  gap: 38rem;
+}
+.theme span img{
+  width: 1vw;
+  height: auto;
+}
+.SOC-cert{
+  margin-left: 1rem;
+}
+.theme{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.theme span{
+  
+}
+.theme-bar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background: #28261fc6;
+  padding: 0.6rem 1rem;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+.theme-bar1{
+  box-shadow: 0 0 0 6px #49433B;
+  border-radius: 0.3rem;
+}
+.lang-bar{
+  color: #CCCCCC;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  background: #28261fc6;
+  padding: 0.4rem 0.5rem;
+  border-radius: 1rem;
 }
