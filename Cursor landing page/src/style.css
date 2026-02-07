@@ -316,7 +316,7 @@ main{
 }
 .updates{
    width: 87vw;
-  height: 100vh;
+  height: 150vh;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -333,7 +333,6 @@ main{
 }
 .updates p:hover{
   color: #ca4000;
-  
 }
 .changelog{
   display: flex;
@@ -363,4 +362,34 @@ main{
   color: #CCCCCC;
   font-weight: 400;
   line-height: 1.2rem;
+}
+.reasearch{
+  margin-top: 7rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 7rem;
+  background: #1e1c16c5;
+  padding: 1.5rem;
+  border-radius: 0.3rem;
+}
+.reasearch div p{
+  color: #e4e4e4;
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+.reasearch div p:hover{
+  color: #e4e4e4;
+}
+.reasearch div span{
+  color: #f54e00;
+  cursor: pointer;
+}
+.reasearch div span:hover{
+  color: #ca4000;
+}
+.reasearch img{
+  width: 65%;
+  height: auto;
 }
