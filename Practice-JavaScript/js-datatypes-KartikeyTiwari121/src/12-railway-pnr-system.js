@@ -81,6 +81,7 @@ export function processRailwayPNR(pnrData) {
     + pnrData.pnr.slice(3, 6) + "-"
     + pnrData.pnr.slice(6);
 
+  //destructuring train info
   const { number, name, from, to } = pnrData.train;
   const trainInfo = `Train: ${number} - ${name} | ${from} → ${to} | Class: ${pnrData.classBooked}`;
 
