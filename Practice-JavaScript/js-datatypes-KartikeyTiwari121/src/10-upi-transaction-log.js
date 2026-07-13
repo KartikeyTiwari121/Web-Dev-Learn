@@ -47,5 +47,79 @@
  *   //      frequentContact: "Swiggy", allAbove100: false, hasLargeTransaction: true }
  */
 export function analyzeUPITransactions(transactions) {
-  gvvd
+  if(!Array.isArray(transactions) || transactions.length === 0){
+    return null;
+  }
+
+  let validTransactions = transactions.filter((transaction)=>{
+    if(typeof transaction.amount === "number" && transaction.amount > 0 && (transaction.type === "credit" || transaction.type === "debit")){
+        return transaction;
+    }
+  });
+
+  if(validTransactions.length === 0){
+    return null;
+  }
+
+  const totalCredit = validTransactions.reduce((sum, transaction)=>{
+    if(transaction.type === "credit"){
+        sum = sum + transaction.amount;
+    }
+    return sum;
+  }, 0);
+  const totalDebit = validTransactions.reduce((sum, transaction)=>{
+    if(transaction.type === "debit"){
+        sum = sum + transaction.amount;
+    }
+    return sum;
+  }, 0);
+
+  const netBalance = totalCredit - totalDebit;
+
+  const transactionCount = validTransactions.length;
+
+  const avgTransaction = Math.round((totalCredit + totalDebit)/transactionCount);
+
+  const highestTransaction = [...validTransactions].sort((a, b)=> b.amount - a.amount)[0];
+
+  const categoryBreakdown = validTransactions.reduce((acc, transaction)=>{
+    acc[transaction.category] = (acc[transaction.category] || 0) + transaction.amount;
+    return acc;
+  }, {});
+
+  const contactCount = validTransactions.reduce((acc, transaction)=>{
+    acc[transaction.to] = (acc[transaction.to] || 0) + 1;
+    return acc;
+  }, {});
+
+
+  let frequentContact = validTransactions[0].to;
+  let maxCount = 0;
+  for(const [contact, count] of Object.entries(contactCount)){
+    if(count>maxCount){
+      maxCount = count;
+      frequentContact = contact;
+    }
+  }
+
+  const allAbove100 = validTransactions.every((t)=>{
+    return t.amount > 100;
+  });
+
+  const hasLargeTransaction = validTransactions.some((t)=>{
+    return t.amount >= 5000;
+  });
+
+  return{
+    totalCredit,
+    totalDebit,
+    netBalance,
+    transactionCount,
+    avgTransaction,
+    highestTransaction,
+    categoryBreakdown,
+    frequentContact,
+    allAbove100,
+    hasLargeTransaction
+  }
 }
