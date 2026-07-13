@@ -94,6 +94,7 @@ export function buildZomatoOrder(cart, coupon) {
         break; 
       case "freeship":
         discount = deliveryFee;
+        deliveryFee = 0;
         break;   
     }
   }
