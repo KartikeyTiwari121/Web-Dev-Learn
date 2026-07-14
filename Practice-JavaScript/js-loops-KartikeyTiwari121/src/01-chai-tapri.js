@@ -27,5 +27,15 @@
  *   // => { totalChai: 0, totalRevenue: 0 }
  */
 export function chaiTapriRevenue(customers) {
-  // Your code here
+  let rev = { totalChai: 0, totalRevenue: 0 }; 
+
+  if(typeof customers !== "number" || customers <= 0 || !Number.isInteger(customers) || Number.isNaN(customers)){
+    return rev;
+  }
+  let cutting = (Math.floor(customers/3));
+  let adrak = customers - cutting;
+  rev.totalChai = customers;
+  rev.totalRevenue = cutting*15 + adrak*10;
+
+  return rev;
 }
