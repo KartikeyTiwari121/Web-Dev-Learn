@@ -45,5 +45,159 @@
  *   // => [{ name: "Rahul", trainNumber: "12345", class: "sleeper", status: "confirmed" }]
  */
 export function railwayReservation(passengers, trains) {
-  // Your code here
+  // Validation
+  if (
+    !Array.isArray(passengers) ||
+    !Array.isArray(trains) ||
+    passengers.length === 0 ||
+    trains.length === 0
+  ) {
+    return [];
+  }
+  let finalList = [];
+
+  for(let i=0; i< passengers.length; i++){
+
+    let name = passengers[i].name;
+    let trainNumber = passengers[i].trainNumber;
+    let preferred = passengers[i].preferred;
+    let fallback = passengers[i].fallback;
+
+    let seatBooked = false;
+    for(let j=0; j< trains.length; j++){
+
+    if(trains[j].trainNumber === trainNumber)
+        {
+          seatBooked = true;
+          if(trains[j].seats[preferred]>0){
+          finalList.push({
+             name,
+             trainNumber,
+             class: preferred,
+             status: "confirmed"
+          });
+          trains[j].seats[preferred]--;
+          
+          } else if(trains[j].seats[fallback]>0){
+          finalList.push({
+             name,
+             trainNumber,
+             class: fallback,
+             status: "confirmed"
+          });
+          trains[j].seats[fallback]--;
+          
+          }
+          else{
+          finalList.push({
+             name,
+             trainNumber,
+             class: preferred,
+             status: "waitlisted"
+          });
+          
+          }
+          break;
+        }
+
+    }
+
+    if(!seatBooked){
+      finalList.push({
+        name,
+        trainNumber,
+        class:null,
+        status:"train_not_found"
+      });
+    }
+  }
+
+  return finalList;
 }
+
+//GPT aproach***********************************************
+// export function railwayReservation(passengers, trains) {
+
+//   // Validation
+//   if (
+//     !Array.isArray(passengers) ||
+//     !Array.isArray(trains) ||
+//     passengers.length === 0 ||
+//     trains.length === 0
+//   ) {
+//     return [];
+//   }
+
+//   const result = [];
+
+//   // Process passengers (FIFO)
+//   for (let i = 0; i < passengers.length; i++) {
+
+//     const passenger = passengers[i];
+//     let trainFound = false;
+
+//     // Find matching train
+//     for (let j = 0; j < trains.length; j++) {
+
+//       const train = trains[j];
+
+//       if (train.trainNumber !== passenger.trainNumber) {
+//         continue;
+//       }
+
+//       trainFound = true;
+
+//       // Preferred class
+//       if (train.seats[passenger.preferred] > 0) {
+
+//         train.seats[passenger.preferred]--;
+
+//         result.push({
+//           name: passenger.name,
+//           trainNumber: passenger.trainNumber,
+//           class: passenger.preferred,
+//           status: "confirmed",
+//         });
+
+//       }
+//       // Fallback class
+//       else if (train.seats[passenger.fallback] > 0) {
+
+//         train.seats[passenger.fallback]--;
+
+//         result.push({
+//           name: passenger.name,
+//           trainNumber: passenger.trainNumber,
+//           class: passenger.fallback,
+//           status: "confirmed",
+//         });
+
+//       }
+//       // Waitlisted
+//       else {
+
+//         result.push({
+//           name: passenger.name,
+//           trainNumber: passenger.trainNumber,
+//           class: passenger.preferred,
+//           status: "waitlisted",
+//         });
+
+//       }
+
+//       break;
+//     }
+
+//     // Train not found
+//     if (!trainFound) {
+//       result.push({
+//         name: passenger.name,
+//         trainNumber: passenger.trainNumber,
+//         class: null,
+//         status: "train_not_found",
+//       });
+//     }
+//   }
+
+//   return result;
+// }
